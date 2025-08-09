@@ -44,7 +44,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? " bg-emerald-200/95 backdrop-blur-xl shadow-lg"
+          ? " bg-white/10 backdrop-blur-xl shadow-lg"
           : "bg-white/95 backdrop-blur-md shadow-lg"
       }`}
     >
@@ -74,7 +74,7 @@ const Header = () => {
                   className={`relative px-5 py-3 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 group overflow-hidden ${
                     isScrolled
                       ? "text-gray-700 hover:text-blue-600"
-                      : "text-black/90 hover:text-black"
+                      : "text-black/90 hover:text-blue-800"
                   }`}
                 >
                   <span className="relative z-10">{item.name}</span>
@@ -82,7 +82,7 @@ const Header = () => {
                     className={`absolute inset-0 rounded-xl transition-all duration-300 transform scale-0 group-hover:scale-100 ${
                       isScrolled
                         ? "bg-gradient-to-r from-blue-50 to-indigo-50 shadow-md"
-                        : "bg-white/80 backdrop-blur-sm shadow-lg"
+                        : "bg-blue-100/80 backdrop-blur-sm shadow-lg"
                     }`}
                   ></div>
                   <div
