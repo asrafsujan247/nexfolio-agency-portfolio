@@ -1,75 +1,77 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState('all')
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const portfolioItems = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Modern e-commerce solution with React and Node.js',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      link: '#'
+      title: "E-commerce Platform",
+      category: "web",
+      image: "/project-demo.jpg",
+      description: "Modern e-commerce solution with React and Node.js",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      link: "#",
     },
     {
       id: 2,
-      title: 'Mobile Banking App',
-      category: 'mobile',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Secure mobile banking application with biometric authentication',
-      technologies: ['React Native', 'Firebase', 'Biometrics'],
-      link: '#'
+      title: "Mobile Banking App",
+      category: "mobile",
+      image: "/project-demo.jpg",
+      description:
+        "Secure mobile banking application with biometric authentication",
+      technologies: ["React Native", "Firebase", "Biometrics"],
+      link: "#",
     },
     {
       id: 3,
-      title: 'Brand Identity Design',
-      category: 'design',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Complete brand identity and logo design for tech startup',
-      technologies: ['Adobe Creative Suite', 'Figma', 'Brand Strategy'],
-      link: '#'
+      title: "Brand Identity Design",
+      category: "design",
+      image: "/project-demo.jpg",
+      description: "Complete brand identity and logo design for tech startup",
+      technologies: ["Adobe Creative Suite", "Figma", "Brand Strategy"],
+      link: "#",
     },
     {
       id: 4,
-      title: 'SaaS Dashboard',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Analytics dashboard for SaaS platform with real-time data',
-      technologies: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
-      link: '#'
+      title: "SaaS Dashboard",
+      category: "web",
+      image: "/project-demo.jpg",
+      description: "Analytics dashboard for SaaS platform with real-time data",
+      technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
+      link: "#",
     },
     {
       id: 5,
-      title: 'Fitness Tracking App',
-      category: 'mobile',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Cross-platform fitness app with social features',
-      technologies: ['Flutter', 'Firebase', 'HealthKit'],
-      link: '#'
+      title: "Fitness Tracking App",
+      category: "mobile",
+      image: "/project-demo.jpg",
+      description: "Cross-platform fitness app with social features",
+      technologies: ["Flutter", "Firebase", "HealthKit"],
+      link: "#",
     },
     {
       id: 6,
-      title: 'Restaurant Website',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Elegant restaurant website with online reservation system',
-      technologies: ['Next.js', 'Tailwind CSS', 'Sanity CMS'],
-      link: '#'
-    }
-  ]
+      title: "Restaurant Website",
+      category: "web",
+      image: "/project-demo.jpg",
+      description: "Elegant restaurant website with online reservation system",
+      technologies: ["Next.js", "Tailwind CSS", "Sanity CMS"],
+      link: "#",
+    },
+  ];
 
   const filters = [
-    { key: 'all', label: 'All Projects' },
-    { key: 'web', label: 'Web Development' },
-    { key: 'mobile', label: 'Mobile Apps' },
-    { key: 'design', label: 'Design' }
-  ]
+    { key: "all", label: "All Projects" },
+    { key: "web", label: "Web Development" },
+    { key: "mobile", label: "Mobile Apps" },
+    { key: "design", label: "Design" },
+  ];
 
-  const filteredItems = activeFilter === 'all' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeFilter)
+  const filteredItems =
+    activeFilter === "all"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeFilter);
 
   return (
     <section id="portfolio" className="py-20 bg-gray-50">
@@ -80,7 +82,8 @@ const Portfolio = () => {
             Our <span className="text-blue-600">Portfolio</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Explore our recent work and see how we've helped businesses achieve their digital goals through innovative solutions.
+            Explore our recent work and see how we've helped businesses achieve
+            their digital goals through innovative solutions.
           </p>
         </div>
 
@@ -92,8 +95,8 @@ const Portfolio = () => {
               onClick={() => setActiveFilter(filter.key)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeFilter === filter.key
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                  ? "bg-blue-600 text-white shadow-lg"
+                  : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600"
               }`}
             >
               {filter.label}
@@ -115,7 +118,7 @@ const Portfolio = () => {
                   alt={item.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
                   <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
                       View Project
@@ -126,9 +129,13 @@ const Portfolio = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{item.description}</p>
-                
+                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.technologies.map((tech, index) => (
@@ -147,8 +154,18 @@ const Portfolio = () => {
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
                 >
                   View Details
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </a>
               </div>
@@ -159,7 +176,8 @@ const Portfolio = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-lg text-gray-600 mb-6">
-            Interested in working with us? Let's create something amazing together.
+            Interested in working with us? Let's create something amazing
+            together.
           </p>
           <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105">
             Start Your Project
@@ -167,7 +185,7 @@ const Portfolio = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;
