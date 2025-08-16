@@ -1,4 +1,5 @@
 import React from "react";
+import HeroImage from "/agency-office-demo.jpg";
 
 /**
  * The Hero component is the main section of the homepage. It displays a background with a gradient and a title, a tagline, and a call-to-action.
@@ -65,20 +66,12 @@ const Hero = () => {
             <div className="relative z-10">
               <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl p-6 mb-4">
-                  <div className="w-full h-48 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
-                    <svg
-                      className="w-16 h-16 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                  <div className="w-full h-48 rounded-lg flex items-center justify-center">
+                    <img
+                      src={HeroImage}
+                      className="w-full h-full object-cover rounded-2xl"
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
