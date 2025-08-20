@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20"
+      className="min-h-screen flex items-center justify-center pt-20"
     >
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -92,7 +92,7 @@ const Hero = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a
             href="#about"
-            className="text-gray-400 hover:text-blue-600 transition-colors"
+            className="text-blue-400 hover:text-blue-600 transition-colors"
           >
             <svg
               className="w-6 h-6"

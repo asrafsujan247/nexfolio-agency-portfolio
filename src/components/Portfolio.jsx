@@ -74,7 +74,7 @@ const Portfolio = () => {
       : portfolioItems.filter((item) => item.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-50">
+    <section id="portfolio" className="py-20 ">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -128,7 +128,7 @@ const Portfolio = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col">
                 <h3 className="text-xl font-bold text-gray-800 mb-3">
                   {item.title}
                 </h3>
