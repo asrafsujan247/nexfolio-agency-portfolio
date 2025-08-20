@@ -120,7 +120,7 @@ const Header = () => {
             className={`md:hidden relative p-3 rounded-xl transition-all duration-300 group ${
               isScrolled
                 ? "text-gray-700 hover:text-blue-600"
-                : "text-white hover:text-blue-300"
+                : "text-blue-700 hover:text-blue-300"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -156,23 +156,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div
-            className={`md:hidden mb-4 rounded-2xl backdrop-blur-xl transition-all duration-300 transform ${
-              isScrolled
-                ? "bg-white/95 shadow-xl border border-gray-100"
-                : "bg-gray-800/90 border border-white/10 shadow-2xl"
-            }`}
-          >
+          <div className="md:hidden mb-5 rounded-2xl backdrop-blur-xl transition-all duration-300 transform bg-white/95 shadow-xl border border-gray-100">
             <div className="p-6 space-y-3">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`relative block px-6 py-4 rounded-xl font-medium text-base transition-all duration-300 group overflow-hidden ${
-                    isScrolled
-                      ? "text-gray-700 hover:text-blue-600"
-                      : "text-white/90 hover:text-white"
-                  }`}
+                  className="relative block px-6 py-4 rounded-xl font-medium text-base transition-all duration-300 group overflow-hidden text-gray-700 hover:text-blue-600"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <span className="relative z-10">{item.name}</span>
@@ -186,21 +176,8 @@ const Header = () => {
                 </a>
               ))}
               <div className="pt-4 border-t border-gray-200/20">
-                <button
-                  className={`relative w-full px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 group overflow-hidden ${
-                    isScrolled
-                      ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg"
-                      : "bg-white/10 backdrop-blur-sm text-white border-2 border-white/30"
-                  }`}
-                >
+                <button className="relative w-full px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 group overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg">
                   <span className="relative z-10">Get Started</span>
-                  <div
-                    className={`absolute inset-0 rounded-xl transition-all duration-300 transform scale-0 group-hover:scale-100 ${
-                      isScrolled
-                        ? "bg-gradient-to-r from-blue-700 to-blue-800"
-                        : "bg-white/20"
-                    }`}
-                  ></div>
                 </button>
               </div>
             </div>
