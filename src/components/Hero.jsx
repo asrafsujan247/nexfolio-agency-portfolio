@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImage from "/agency-office-demo.jpg";
+import TextType from "../shared/TextType";
 
 /**
  * The Hero component is the main section of the homepage. It displays a background with a gradient and a title, a tagline, and a call-to-action.
@@ -14,18 +15,30 @@ const Hero = () => {
       id="hero"
       className="min-h-screen flex items-center justify-center pt-20"
     >
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="px-8 lg:my-20">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-              We Create
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                {" "}
-                Digital Excellence
-              </span>
+          <div className="text-center lg:text-left mt-16 lg:mt-0">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <div className="h-20 flex items-center justify-center lg:justify-start mb-4 lg:mb-14">
+                <TextType
+                  text={[
+                    "We Create Digital Excellence",
+                    "Crafting Seamless Digital Solutions",
+                    "Turning Vision Into Reality",
+                  ]}
+                  typingSpeed={80}
+                  pauseDuration={1500}
+                  deletingSpeed={50}
+                  showCursor={true}
+                  cursorCharacter="_"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                  textColors={["blue-600", "purple-600", "blue-600"]}
+                  cursorClassName="text-secondary"
+                />
+              </div>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
               Transform your business with cutting-edge web solutions, stunning
               designs, and innovative digital strategies that drive results.
             </p>
@@ -46,11 +59,11 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Hero Image */}
-          <div className="relative">
+          <div className="relative mb-10 lg:mb-0">
             <div className="relative z-10">
               <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl p-6 mb-4">
-                  <div className="w-full h-56 rounded-lg flex items-center justify-center">
+                  <div className="w-full h-52 rounded-lg flex items-center justify-center">
                     <img
                       src={HeroImage}
                       className="w-full h-full object-cover rounded-2xl"
