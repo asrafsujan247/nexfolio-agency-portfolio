@@ -1,4 +1,5 @@
 import React from "react";
+import TextType from "../shared/TextType";
 
 const About = () => {
   const achievements = [
@@ -15,7 +16,21 @@ const About = () => {
           {/* Left Content */}
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-              About <span className="text-blue-600">NexFolio</span>
+              About
+              <span>
+                <TextType
+                  text={["NexFolio"]}
+                  typingSpeed={80}
+                  pauseDuration={1500}
+                  deletingSpeed={50}
+                  showCursor={true}
+                  cursorCharacter="_"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 ml-3"
+                  textColors={["blue-600", "purple-600", "blue-600"]}
+                  cursorClassName="text-secondary"
+                  startOnVisible={true}
+                />
+              </span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               We are a passionate team of designers, developers, and digital
