@@ -16,11 +16,11 @@ function App() {
       </div>
       <main className="max-w-[1400px] mx-auto">
         <Hero />
-        <About />
+        {/* <About />
         <Services />
         <Portfolio />
         <Testimonials />
-        <Contact />
+        <Contact /> */}
       </main>
       <Footer />
     </div>

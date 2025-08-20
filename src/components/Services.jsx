@@ -1,5 +1,5 @@
 import React from "react";
-import SpotlightCard from "./SpotlightCard";
+import SpotlightCard from "../shared/SpotlightCard";
 
 const Services = () => {
   const services = [

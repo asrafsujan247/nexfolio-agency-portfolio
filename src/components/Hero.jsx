@@ -43,22 +43,6 @@ const Hero = () => {
                 View Our Work
               </a>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
-              <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-blue-600">100+</div>
-                <div className="text-gray-600">Projects Completed</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-blue-600">50+</div>
-                <div className="text-gray-600">Happy Clients</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-blue-600">5+</div>
-                <div className="text-gray-600">Years Experience</div>
-              </div>
-            </div>
           </div>
 
           {/* Right Content - Hero Image */}
@@ -66,7 +50,7 @@ const Hero = () => {
             <div className="relative z-10">
               <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl p-6 mb-4">
-                  <div className="w-full h-48 rounded-lg flex items-center justify-center">
+                  <div className="w-full h-56 rounded-lg flex items-center justify-center">
                     <img
                       src={HeroImage}
                       className="w-full h-full object-cover rounded-2xl"
