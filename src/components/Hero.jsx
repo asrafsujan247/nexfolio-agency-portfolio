@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-20"
+      className="min-h-screen flex items-center justify-center pt-16"
     >
       <div className="px-8 lg:my-20">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
