@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroImage from "/agency-office-demo.jpg";
+import { ChevronRight, Play } from "lucide-react";
 
 /**
  * The Hero component is the main section of the homepage. It displays a background with a gradient and a title, a tagline, and a call-to-action.
@@ -9,10 +10,11 @@ import HeroImage from "/agency-office-demo.jpg";
  */
 
 const Hero = () => {
+  const [hoveredElement, setHoveredElement] = useState(null);
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-16"
+      className="min-h-screen flex items-center justify-center pt-16 max-w-[1400px] mx-auto"
     >
       <div className="px-8 lg:my-20">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -29,19 +31,25 @@ const Hero = () => {
               Transform your business with cutting-edge web solutions, stunning
               designs, and innovative digital strategies that drive results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href="#contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
+
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden font-semibold"
+                onMouseEnter={() => setHoveredElement("cta-primary")}
+                onMouseLeave={() => setHoveredElement(null)}
               >
-                Start Your Project
-              </a>
-              <a
-                href="#portfolio"
-                className="border-2 border-gray-300 text-gray-600 px-8 py-4 rounded-full hover:border-blue-600 hover:text-blue-600 transition-all duration-300 font-semibold"
-              >
+                <span className="relative z-10 flex items-center justify-center">
+                  Start Your Project
+                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </button>
+
+              <button className="group bg-white text-gray-700 px-8 py-4 rounded-full border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 font-semibold flex items-center justify-center">
+                <Play className="mr-2 w-5 h-5 text-blue-600" />
                 View Our Work
-              </a>
+              </button>
             </div>
           </div>
 

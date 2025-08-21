@@ -14,7 +14,7 @@ function App() {
       <div className="max-w-[1400px] mx-auto">
         <Header />
       </div>
-      <main className="max-w-[1400px] mx-auto">
+      <main>
         <Hero />
         <About />
         <Services />
