@@ -28,3 +28,23 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* achievement stats gradient animation styles */
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-light {
+  background: linear-gradient(270deg, #6f85fc, #b56bfb);
+  background-size: 400% 400%;
+  animation: gradient-move 6s ease infinite;
+}

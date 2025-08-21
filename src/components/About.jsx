@@ -12,7 +12,7 @@ const About = () => {
   return (
     <section id="about" className="py-12">
       <div className="px-8 lg:mt-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Content */}
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
@@ -122,21 +122,22 @@ const About = () => {
 
           {/* Right Content - Image/Visual */}
           <div className="relative">
-            <div className="">
-              <img src="/about-1.jpg" alt="" />
+            <div className="w-4/6 z-2">
+              <img className="" src="/about-1.jpg" alt="" />
             </div>
+            {/* <div className="w-4/6 absolute -top-20 left-20 z-1">
+              <img src="/about-2.jpg" alt="" />
+            </div> */}
           </div>
         </div>
 
         {/* Achievement Stats */}
-        <div className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-24 px-10 animated-gradient-light text-white font-bold lg:-mt-28 mt-20">
+          <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  {achievement.number}
-                </div>
-                <div className="text-gray-600 font-medium">
+                <div className="text-4xl mb-2">{achievement.number}</div>
+                <div className="text-gray-50 font-medium">
                   {achievement.label}
                 </div>
               </div>

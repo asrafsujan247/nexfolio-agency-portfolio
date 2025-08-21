@@ -1,6 +1,5 @@
 import React from "react";
 import HeroImage from "/agency-office-demo.jpg";
-import TextType from "../shared/TextType";
 
 /**
  * The Hero component is the main section of the homepage. It displays a background with a gradient and a title, a tagline, and a call-to-action.
@@ -20,23 +19,11 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left mt-16 lg:mt-0">
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-              <div className="h-20 flex items-center justify-center lg:justify-start mb-4 lg:mb-14">
-                <TextType
-                  text={[
-                    "We Create Digital Excellence",
-                    "Crafting Seamless Digital Solutions",
-                    "Turning Vision Into Reality",
-                  ]}
-                  typingSpeed={80}
-                  pauseDuration={1500}
-                  deletingSpeed={50}
-                  showCursor={true}
-                  cursorCharacter="_"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                  textColors={["blue-600", "purple-600", "blue-600"]}
-                  cursorClassName="text-secondary"
-                />
-              </div>
+              We Create{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                {" "}
+                Digital Excellence
+              </span>
             </h1>
             <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
               Transform your business with cutting-edge web solutions, stunning
