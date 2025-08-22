@@ -14,9 +14,9 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-16 max-w-[1400px] mx-auto"
+      className="min-h-screen flex items-center justify-center pt-16"
     >
-      <div className="px-8 lg:my-20">
+      <div className="max-w-[1400px] mx-auto px-8 lg:my-20">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left mt-16 lg:mt-0">
