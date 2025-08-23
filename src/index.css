@@ -29,6 +29,45 @@ html {
   scroll-behavior: smooth;
 }
 
+/* hero section gradient background */
+
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+    linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+  background-size: 20px 30px;
+
+  /* visible until ~70% of hero, then fade out */
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 70% at 50% 0%,
+    #000 70%,
+    transparent 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  mask-image: radial-gradient(
+    ellipse 70% 70% at 50% 0%,
+    #000 70%,
+    transparent 100%
+  );
+  mask-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+.hero-bg > * {
+  position: relative;
+  z-index: 1; /* keep content visible */
+}
+
+
 /* achievement stats gradient animation styles */
 
 @keyframes gradient-move {

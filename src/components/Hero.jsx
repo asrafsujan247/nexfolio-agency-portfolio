@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-16"
+      className="min-h-screen flex items-center justify-center pt-16 hero-bg"
     >
       <div className="max-w-[1400px] mx-auto px-8 lg:my-20">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -33,7 +33,7 @@ const Hero = () => {
             </p>
 
             {/* Enhanced CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col justify-center lg:justify-start sm:flex-row gap-4">
               <button
                 className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden font-semibold"
                 onMouseEnter={() => setHoveredElement("cta-primary")}
@@ -81,7 +81,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a
             href="#about"
             className="text-blue-400 hover:text-blue-600 transition-colors"
