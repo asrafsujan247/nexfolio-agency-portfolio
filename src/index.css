@@ -43,7 +43,7 @@ html {
   background-image: 
     linear-gradient(to right, #e2e8f0 1px, transparent 1px),
     linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
-  background-size: 20px 30px;
+  background-size: 30px 40px;
 
   /* visible until ~70% of hero, then fade out */
   -webkit-mask-image: radial-gradient(

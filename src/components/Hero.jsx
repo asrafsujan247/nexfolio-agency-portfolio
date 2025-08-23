@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import HeroImage from "/agency-office-demo.jpg";
-import { ChevronRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
+import GradientButton from "../shared/GradientButton";
 
 /**
  * The Hero component is the main section of the homepage. It displays a background with a gradient and a title, a tagline, and a call-to-action.
@@ -10,7 +11,6 @@ import { ChevronRight, Play } from "lucide-react";
  */
 
 const Hero = () => {
-  const [hoveredElement, setHoveredElement] = useState(null);
   return (
     <section
       id="hero"
@@ -34,18 +34,7 @@ const Hero = () => {
 
             {/* Enhanced CTA Buttons */}
             <div className="flex flex-col justify-center lg:justify-start sm:flex-row gap-4">
-              <button
-                className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden font-semibold"
-                onMouseEnter={() => setHoveredElement("cta-primary")}
-                onMouseLeave={() => setHoveredElement(null)}
-              >
-                <span className="relative z-10 flex items-center justify-center">
-                  Start Your Project
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
-
+              <GradientButton>Start Your Project</GradientButton>
               <button className="group bg-white text-gray-700 px-8 py-4 rounded-full border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 font-semibold flex items-center justify-center">
                 <Play className="mr-2 w-5 h-5 text-blue-600" />
                 View Our Work
